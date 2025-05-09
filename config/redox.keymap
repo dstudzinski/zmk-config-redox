@@ -46,8 +46,8 @@
             &kp LSHFT  &kp Z      &kp X      &kp C      &kp V      &kp B      &kp HOME   &kp PG_DN      &kp PG_UP  &kp END    &kp N      &kp M      &kp COMMA  &kp DOT    &kp FSLH   &mt RSHFT RET
 //        │ SHIFT    │ Z        │ X        │ C        │ V        │ B        │ HOME     │ PG_DOWN  │   │ PG_UP    │ END      │ N        │ M        │ , <      │ . >      │ / ?      │SHIFT(RET)│
 //        ├──────────┼──────────┼──────────┼──────────┼──────────┴──────────┼──────────┼──────────┤   ├──────────┼──────────┼──────────┴──────────┼──────────├──────────┼──────────┼──────────┤
-            &kp LCTRL  &none      &kp LALT   &kp LGUI   &lt 2 TAB             &kp ENTER  &kp SPACE      &kp DEL    &kp SPACE  &lt 3 BSPC            &kp RGUI   &kp RALT   &none      &kp RCTRL
-//        │ CRTL     │          │ ALT      │ GUI      │ LEFT(TAB)           │ ENTER    │ SPACE    │   │ DEL      │ SPACE    │ RIGHT(BSPC)         │ GUI      │ ALT      │          │ CTRL     │
+            &kp LCTRL  &tog 1     &kp LALT   &kp LGUI   &lt 2 TAB             &kp ENTER  &kp SPACE      &kp DEL    &kp SPACE  &lt 3 BSPC            &kp RGUI   &kp RALT   &none      &kp RCTRL
+//        │ CRTL     │ HRM OFF  │ ALT      │ GUI      │ LEFT(TAB)           │ ENTER    │ SPACE    │   │ DEL      │ SPACE    │ RIGHT(BSPC)         │ GUI      │ ALT      │          │ CTRL     │
 //        ╰──────────┴──────────┴──────────┴──────────┴─────────────────────┤          │          │   │          │          ├─────────────────────┴──────────┴──────────┴──────────┴──────────╯
 //                                                                          ╰──────────┴──────────╯   ╰──────────┴──────────╯
             >;
@@ -70,8 +70,8 @@
             &kp LSHFT  &kp Z      &kp X      &kp C      &kp V      &kp B      &kp HOME   &kp PG_DN      &kp PG_UP  &kp END    &kp N      &kp M      &kp COMMA  &kp DOT    &kp FSLH   &mt RSHFT RET
 //        │ SHIFT    │ Z        │ X        │ C        │ V        │ B        │ HOME     │ PG_DOWN  │   │ PG_UP    │ END      │ N        │ M        │ , <      │ . >      │ / ?      │SHIFT(RET)│
 //        ├──────────┼──────────┼──────────┼──────────┼──────────┴──────────┼──────────┼──────────┤   ├──────────┼──────────┼──────────┴──────────┼──────────├──────────┼──────────┼──────────┤
-            &kp LCTRL  &none      &kp LALT   &kp LGUI   &lt 2 TAB             &kp ENTER  &kp SPACE      &kp DEL    &kp SPACE  &lt 3 BSPC            &kp RGUI   &kp RALT   &none      &kp RCTRL
-//        │ CRTL     │          │ ALT      │ GUI      │ LEFT(TAB)           │ ENTER    │ SPACE    │   │ DEL      │ SPACE    │ RIGHT(BSPC)         │ GUI      │ ALT      │          │ CTRL     │
+            &kp LCTRL  &tog 1     &kp LALT   &kp LGUI   &lt 2 TAB             &kp ENTER  &kp SPACE      &kp DEL    &kp SPACE  &lt 3 BSPC            &kp RGUI   &kp RALT   &none      &kp RCTRL
+//        │ CRTL     │ HRM ON   │ ALT      │ GUI      │ LEFT(TAB)           │ ENTER    │ SPACE    │   │ DEL      │ SPACE    │ RIGHT(BSPC)         │ GUI      │ ALT      │          │ CTRL     │
 //        ╰──────────┴──────────┴──────────┴──────────┴─────────────────────┤          │          │   │          │          ├─────────────────────┴──────────┴──────────┴──────────┴──────────╯
 //                                                                          ╰──────────┴──────────╯   ╰──────────┴──────────╯
             >;
