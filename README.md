@@ -1,0 +1,1 @@
+Repo with info about my keyboards builds: https://github.com/dstudzinski/keyboards
