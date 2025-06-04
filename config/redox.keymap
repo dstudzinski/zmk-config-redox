@@ -31,6 +31,7 @@
     keymap {
         compatible =  "zmk,keymap" ;
 
+// Layer 0
         default_layer {
         bindings = <
 //        ╭──────────┬──────────┬──────────┬──────────┬──────────┬──────────╮                                               ╭──────────┬──────────┬──────────┬──────────┬──────────┬──────────╮
@@ -46,14 +47,15 @@
             &kp LSHFT  &kp Z      &kp X      &kp C      &kp V      &kp B      &kp HOME   &kp PG_DN      &kp PG_UP  &kp END    &kp N      &kp M      &kp COMMA  &kp DOT    &kp FSLH   &mt RSHFT RET
 //        │ SHIFT    │ Z        │ X        │ C        │ V        │ B        │ HOME     │ PG_DOWN  │   │ PG_UP    │ END      │ N        │ M        │ , <      │ . >      │ / ?      │SHIFT(RET)│
 //        ├──────────┼──────────┼──────────┼──────────┼──────────┴──────────┼──────────┼──────────┤   ├──────────┼──────────┼──────────┴──────────┼──────────├──────────┼──────────┼──────────┤
-            &kp LCTRL  &tog 1     &kp LALT   &kp LGUI   &lt 2 TAB             &kp ENTER  &kp SPACE      &kp DEL    &kp SPACE  &lt 3 BSPC            &kp RGUI   &kp RALT   &none      &kp RCTRL
-//        │ CRTL     │ HRM OFF  │ ALT      │ GUI      │ LEFT(TAB)           │ ENTER    │ SPACE    │   │ DEL      │ SPACE    │ RIGHT(BSPC)         │ GUI      │ ALT      │          │ CTRL     │
+            &kp LCTRL  &none      &kp LALT   &kp LGUI   &lt 3 TAB             &kp ENTER  &kp SPACE      &kp DEL    &kp SPACE  &lt 4 BSPC            &kp RGUI   &kp RALT   &none      &kp RCTRL
+//        │ CRTL     │          │ ALT      │ GUI      │ LEFT(TAB)           │ ENTER    │ SPACE    │   │ DEL      │ SPACE    │ RIGHT(BSPC)         │ GUI      │ ALT      │          │ CTRL     │
 //        ╰──────────┴──────────┴──────────┴──────────┴─────────────────────┤          │          │   │          │          ├─────────────────────┴──────────┴──────────┴──────────┴──────────╯
 //                                                                          ╰──────────┴──────────╯   ╰──────────┴──────────╯
             >;
 
         };
 
+// Layer 1
         // it's a copy of default layer but without HRML and HRMR home row modifiers macros
         default_no_hrm_layer {
         bindings = <
@@ -70,13 +72,38 @@
             &kp LSHFT  &kp Z      &kp X      &kp C      &kp V      &kp B      &kp HOME   &kp PG_DN      &kp PG_UP  &kp END    &kp N      &kp M      &kp COMMA  &kp DOT    &kp FSLH   &mt RSHFT RET
 //        │ SHIFT    │ Z        │ X        │ C        │ V        │ B        │ HOME     │ PG_DOWN  │   │ PG_UP    │ END      │ N        │ M        │ , <      │ . >      │ / ?      │SHIFT(RET)│
 //        ├──────────┼──────────┼──────────┼──────────┼──────────┴──────────┼──────────┼──────────┤   ├──────────┼──────────┼──────────┴──────────┼──────────├──────────┼──────────┼──────────┤
-            &kp LCTRL  &tog 1     &kp LALT   &kp LGUI   &lt 2 TAB             &kp ENTER  &kp SPACE      &kp DEL    &kp SPACE  &lt 3 BSPC            &kp RGUI   &kp RALT   &none      &kp RCTRL
-//        │ CRTL     │ HRM ON   │ ALT      │ GUI      │ LEFT(TAB)           │ ENTER    │ SPACE    │   │ DEL      │ SPACE    │ RIGHT(BSPC)         │ GUI      │ ALT      │          │ CTRL     │
+            &kp LCTRL  &none      &kp LALT   &kp LGUI   &lt 3 TAB             &kp ENTER  &kp SPACE      &kp DEL    &kp SPACE  &lt 4 BSPC            &kp RGUI   &kp RALT   &none      &kp RCTRL
+//        │ CRTL     │          │ ALT      │ GUI      │ LEFT(TAB)           │ ENTER    │ SPACE    │   │ DEL      │ SPACE    │ RIGHT(BSPC)         │ GUI      │ ALT      │          │ CTRL     │
 //        ╰──────────┴──────────┴──────────┴──────────┴─────────────────────┤          │          │   │          │          ├─────────────────────┴──────────┴──────────┴──────────┴──────────╯
 //                                                                          ╰──────────┴──────────╯   ╰──────────┴──────────╯
             >;
         };
 
+// Layer 2
+        // it's a colemak mod dh layout with home row modifiers
+        default_colemak_dh_layer {
+        bindings = <
+//        ╭──────────┬──────────┬──────────┬──────────┬──────────┬──────────╮                                               ╭──────────┬──────────┬──────────┬──────────┬──────────┬──────────╮
+            &kp ESC    &kp N1     &kp N2     &kp N3     &kp N4     &kp N5                                                     &kp N6     &kp N7     &kp N8     &kp N9     &kp N0     &kp BSPC
+//        │ ESC      │ 1 !      │ 2 @      │ 3 #      │ 4 $      │ 5 %      ├──────────╮                         ╭──────────┤ 6 ^      │ 7 &      │ 8 *      │ 9 (      │ 0 )      │ BSPC     │
+//        ├──────────┼──────────┼──────────┼──────────┼──────────┼──────────┤ (        │                         │ )        ├──────────┼──────────┼──────────├──────────┼──────────┼──────────┤
+            &kp TAB    &kp Q      &kp W      &kp F      &kp P      &kp B      &kp LPAR                             &kp RPAR   &kp J      &kp L      &kp U      &kp Y      &kp SEMI   &kp MINUS
+//        │ TAB      │ Q        │ W        │ F        │ P        │ B        ├──────────┤                         ├──────────┤ J        │ L        │ U        │ Y        │ ; :      │ - _      │
+//        ├──────────┼──────────┼──────────┼──────────┼──────────┼──────────┤          │                         │          ├──────────┼──────────┼──────────├──────────┼──────────┼──────────┤
+            &none      HRML(A,    R,         S,         T)         &kp G      &kp LBKT                             &kp RBKT   &kp M      HRMR(N,    E,         I,         O)         &kp SQT
+//        │          │ A        │ R        │ S        │ T        │ G        │ [ {      │                         │ ] }      │ M        │ N        │ E        │ I        │ O        │ ' "      │
+//        ├──────────┼──────────┼──────────┼──────────┼──────────┼──────────┼──────────┼──────────╮   ╭──────────┼──────────┼──────────┼──────────┼──────────├──────────┼──────────┼──────────┤
+            &kp LSHFT  &kp Z      &kp X      &kp C      &kp D      &kp V      &kp HOME   &kp PG_DN      &kp PG_UP  &kp END    &kp K      &kp H      &kp COMMA  &kp DOT    &kp FSLH   &mt RSHFT RET
+//        │ SHIFT    │ Z        │ X        │ C        │ D        │ V        │ HOME     │ PG_DOWN  │   │ PG_UP    │ END      │ K        │ H        │ , <      │ . >      │ / ?      │SHIFT(RET)│
+//        ├──────────┼──────────┼──────────┼──────────┼──────────┴──────────┼──────────┼──────────┤   ├──────────┼──────────┼──────────┴──────────┼──────────├──────────┼──────────┼──────────┤
+            &kp LCTRL  &none      &kp LALT   &kp LGUI   &lt 3 TAB             &kp ENTER  &kp SPACE      &kp DEL    &kp SPACE  &lt 4 BSPC            &kp RGUI   &kp RALT   &none      &kp RCTRL
+//        │ CRTL     │          │ ALT      │ GUI      │ LEFT(TAB)           │ ENTER    │ SPACE    │   │ DEL      │ SPACE    │ RIGHT(BSPC)         │ GUI      │ ALT      │          │ CTRL     │
+//        ╰──────────┴──────────┴──────────┴──────────┴─────────────────────┤          │          │   │          │          ├─────────────────────┴──────────┴──────────┴──────────┴──────────╯
+//                                                                          ╰──────────┴──────────╯   ╰──────────┴──────────╯
+            >;
+        };
+
+// Layer 3
         left_layer {
         bindings = <
 //        ╭──────────┬──────────┬──────────┬──────────┬──────────┬──────────╮                                               ╭──────────┬──────────┬──────────┬──────────┬──────────┬──────────╮
@@ -92,13 +119,14 @@
             &trans     &none      &none      &none      &none      &none      &none      &none          &none      &none      &kp AMPS   &kp UNDER  &kp PLUS   &kp PIPE   &kp FSLH    &trans
 //        │ SHIFT    │          │          │          │          │          │          │          │   │          │          │ &        │ _        │ +        │ |        │ / ?      │SHIFT(RET)│
 //        ├──────────┼──────────┼──────────┼──────────┼──────────┴──────────┼──────────┼──────────┤   ├──────────┼──────────┼──────────┴──────────┼──────────├──────────┼──────────┼──────────┤
-            &trans     &none      &trans     &trans     &trans                &trans     &trans         &trans     &trans     &lt 4 BSPC            &trans     &trans     &none      &trans
+            &trans     &none      &trans     &trans     &trans                &trans     &trans         &trans     &trans     &lt 5 BSPC            &trans     &trans     &none      &trans
 //        │ CRTL     │          │ ALT      │ GUI      │ LEFT(TAB)           │ ENTER    │ SPACE    │   │ DEL      │ SPACE    │ ADJUST(BSPC)        │ GUI      │ ALT      │          │ CTRL     │
 //        ╰──────────┴──────────┴──────────┴──────────┴─────────────────────┤          │          │   │          │          ├─────────────────────┴──────────┴──────────┴──────────┴──────────╯
 //                                                                          ╰──────────┴──────────╯   ╰──────────┴──────────╯
             >;
         };
 
+// Layer 4
         right_layer {
         bindings = <
 //        ╭──────────┬──────────┬──────────┬──────────┬──────────┬──────────╮                                               ╭──────────┬──────────┬──────────┬──────────┬──────────┬──────────╮
@@ -114,13 +142,14 @@
             &trans     &caps_word &kp N7     &kp N8     &kp N9     &kp N0     &none      &none          &none      &none      &kp MINUS  &kp PLUS   &kp COMMA  &kp DOT    &kp FSLH   &trans
 //        │ SHIFT    │ CAPS     │ 7 &      │ 8 *      │ 9 (      │ 0 )      │          │          │   │          │          │ - _      │ +        │ , <      │ . >      │ / ?      │SHIFT(RET)│
 //        ├──────────┼──────────┼──────────┼──────────┼──────────┴──────────┼──────────┼──────────┤   ├──────────┼──────────┼──────────┴──────────┼──────────├──────────┼──────────┼──────────┤
-            &trans     &none      &trans     &trans     &lt 4 TAB             &trans     &trans         &trans     &trans     &trans                &trans     &trans     &none      &trans
+            &trans     &none      &trans     &trans     &lt 5 TAB             &trans     &trans         &trans     &trans     &trans                &trans     &trans     &none      &trans
 //        │ CRTL     │          │ ALT      │ GUI      │ ADJUST(TAB)         │ ENTER    │ SPACE    │   │ DEL      │ SPACE    │ RIGHT(BSPC)         │ GUI      │ ALT      │          │ CTRL     │
 //        ╰──────────┴──────────┴──────────┴──────────┴─────────────────────┤          │          │   │          │          ├─────────────────────┴──────────┴──────────┴──────────┴──────────╯
 //                                                                          ╰──────────┴──────────╯   ╰──────────┴──────────╯
             >;
         };
 
+// Layer 5
         adjust_layer {
         bindings = <
 //        ╭──────────┬──────────┬──────────┬──────────┬──────────┬──────────╮                                               ╭──────────┬──────────┬──────────┬──────────┬──────────┬──────────╮
@@ -136,7 +165,7 @@
             &trans     &none      &none      &none     &bt BT_CLR &bt BT_SEL 2 &none     &none          &none      &none      &kp PSCRN  &kp CLCK   &none      &none      &none      &trans
 //        │ SHIFT    │          │          │          │ BT CLR   │ BT 2     │          │          │   │          │          │ PSCRN    │ CLCK     │          │          │          │SHIFT(RET)│
 //        ├──────────┼──────────┼──────────┼──────────┼──────────┴──────────┼──────────┼──────────┤   ├──────────┼──────────┼──────────┴──────────┼──────────├──────────┼──────────┼──────────┤
-            &trans     &none      &trans     &trans     &lt 2 TAB             &trans     &trans         &trans     &trans     &lt 3 BSPC            &trans     &trans     &none      &trans
+            &trans     &none      &trans     &trans     &lt 3 TAB             &trans     &trans         &trans     &trans     &lt 4 BSPC            &trans     &trans     &none      &trans
 //        │ CRTL     │          │ ALT      │ GUI      │ LEFT(TAB)           │ ENTER    │ SPACE    │   │ DEL      │ SPACE    │ RIGHT(BSPC)         │ GUI      │ ALT      │          │ CTRL     │
 //        ╰──────────┴──────────┴──────────┴──────────┴─────────────────────┤          │          │   │          │          ├─────────────────────┴──────────┴──────────┴──────────┴──────────╯
 //                                                                          ╰──────────┴──────────╯   ╰──────────┴──────────╯
