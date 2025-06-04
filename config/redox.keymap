@@ -156,8 +156,8 @@
             &trans     &kp F1     &kp F2     &kp F3     &kp F4     &kp F5                                                     &kp F8     &kp F9     &kp F10    &kp F11    &kp F12    &trans
 //        │ ESC      │ F1       │ F2       │ F3       │ F4       │ F5       ├──────────╮                         ╭──────────┤ F8       │ F9       │ F10      │ F11      │ F12      │ BSPC     │
 //        ├──────────┼──────────┼──────────┼──────────┼──────────┼──────────┤ F6       │                         │ F7       ├──────────┼──────────┼──────────├──────────┼──────────┼──────────┤
-            &trans     &sys_reset &tog 1     &none  &out OUT_USB &bt BT_SEL 0 &kp F6                               &kp F7     &none      &none      &none      &none      &sys_reset &none
-//        │ TAB      │ RESET    │HRM ON/OFF│          │ OUT USB  │ BT 0     ├──────────┤                         ├──────────┤          │          │          │          │ RESET    │          │
+            &trans     &sys_reset &tog 1     &tog 2  &out OUT_USB &bt BT_SEL 0 &kp F6                               &kp F7     &none      &none      &none      &none     &sys_reset &none
+//        │ TAB      │ RESET    │ HRM TGL  │ COLE TGL │ OUT USB  │ BT 0     ├──────────┤                         ├──────────┤          │          │          │          │ RESET    │          │
 //        ├──────────┼──────────┼──────────┼──────────┼──────────┼──────────┤          │                         │          ├──────────┼──────────┼──────────├──────────┼──────────┼──────────┤
             &trans    &bootloader &none      &none &out OUT_BLE &bt BT_SEL 1 &none                                 &none    &kp K_MUTE &kp C_VOL_DN &kp C_VOL_UP &kp C_PLAY_PAUSE &bootloader &none
 //        │          │BOOTLOADER│          │          │ OUT BT   │ BT 1     │          │                         │          │ MUTE     │ VOL DN   │ VOL UP   │PLAY/PAUSE│BOOTLOADER│          │
